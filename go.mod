@@ -1,6 +1,6 @@
 module github.com/openshift-online/kube-applier-gcp
 
-go 1.26.0
+go 1.26.10
 
 require (
 	cloud.google.com/go/firestore v1.26.0

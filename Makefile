@@ -1,3 +1,6 @@
+# Pin the compiler and standard library for CVE-2026-111943.
+export GOTOOLCHAIN = go1.26.10
+
 BINARY ?= kube-applier-gcp
 IMAGE  ?= kube-applier-gcp
 TAG    ?= latest

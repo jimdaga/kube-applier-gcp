@@ -13,6 +13,17 @@ At a high level:
    The observed content is written to `.status.kubeContent`.
    Success/failure is written to `.status.conditions["Successful"]`.
 
+## Building
+
+Install Go 1.26.10 on `PATH` before running `make build`, `make test`, or
+`make vet`. These targets check the installed version and set
+`GOTOOLCHAIN=local`; they do not download a replacement toolchain. Use the same
+setting for direct Go commands.
+
+The Containerfile installs Red Hat's `1.26.10-1.el9_8` Go RPMs from UBI
+repositories before compiling. CI images must also provide the patched compiler
+before running Makefile targets.
+
 ## API structure
 The API types for this live in `pkg/api/kubeapplier`.
 

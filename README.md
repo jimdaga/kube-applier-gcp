@@ -20,9 +20,9 @@ Install Go 1.26.10 on `PATH` before running `make build`, `make test`, or
 `GOTOOLCHAIN=local`; they do not download a replacement toolchain. Use the same
 setting for direct Go commands.
 
-The Containerfile installs Red Hat's `1.26.10-1.el9_8` Go RPMs from UBI
-repositories before compiling. CI images must also provide the patched compiler
-before running Makefile targets.
+The Containerfile uses the Red Hat Go toolchain bundled with the UBI 9 builder.
+Builder and CI images must provide Go 1.26.10 before compiling or running
+Makefile targets.
 
 ## API structure
 The API types for this live in `pkg/api/kubeapplier`.
